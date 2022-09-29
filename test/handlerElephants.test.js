@@ -17,6 +17,10 @@ describe('Testes da função HandlerElephants', () => {
   });
 
   // Para o argumento location deve retornar a string NW;
+  it('Para o argumento location deve retornar a string NW', () => {
+    expect(handlerElephants('location')).toBe('NW');
+  });
+
   // Para o argumento popularity deve retornar um número igual ou maior a 5;
   // Para o argumento availability deve retornar um array de dias da semana que não contém Monday;
   // Não passando argumentos a função deve retornar undefined;
@@ -25,5 +29,9 @@ describe('Testes da função HandlerElephants', () => {
   });
 
   // Passando por argumento um objeto vazio ({}) deve retornar a string 'Parâmetro inválido, é necessário uma string';
+  it('Passando por argumento um objeto vazio ({}) deve retornar a string: Parâmetro inválido, é necessário uma string', () => {
+    expect(handlerElephants({})).toBe('Parâmetro inválido, é necessário uma string');
+  });
+
   // Passada uma string que não contempla uma funcionalidade deve retornar null.
 });
