@@ -34,4 +34,7 @@ describe('Testes da função HandlerElephants', () => {
   });
 
   // Passada uma string que não contempla uma funcionalidade deve retornar null.
+  it('Passada uma string que não contempla uma funcionalidade deve retornar null.', () => {
+    expect(handlerElephants('unrecParam')).toBeNull();
+  });
 });
